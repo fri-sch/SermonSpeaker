@@ -422,6 +422,7 @@ class JFormFieldCustomFileList extends JFormFieldFileList
 							jQuery("#" + file.id).removeClass("alert-info").addClass("alert-success");
 							document.getElementById(file.id).innerHTML = data.error + closeButton;
 							document.id("' . $this->id . '_text").value = data.path;
+							lookup(document.getElementById(\'' . $this->id . '_text\'));
 						}else{
 							jQuery("#" + file.id).removeClass("alert-info").addClass("alert-error");
 							jQuery("#" + file.id + "_progress").replaceWith(" &raquo; ' . JText::_('ERROR') . ': " + data.error + closeButton);
